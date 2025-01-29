@@ -1,0 +1,6 @@
+**/*.out
+**/wandb/**
+**/runs/**
+**/__pycache__/**
+*.egg-info/**
+.vscode/**

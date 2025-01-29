@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+envlist = style
+
+[testenv:style]
+deps =
+    types-setuptools
+    pre-commit
+    ruff
+    isort
+    bandit[toml]
+    black
+commands =
+    pre-commit run --all-files --show-diff-on-failure
+skip_install = true
+"""
+
+[tool.black]
+line-length = 120
+include = '\.py$'
+exclude = '''
+/(
+    \.git
+  | \.tox
+  | \.ipynb
+)/
+'''
+
+[tool.bandit]
+# B101 tests the use of assert
+# B301 and B403 test the use of pickle
+# B614 tests safe pytorch model loading and saving
+skips = ["B101", "B301", "B403", "B614"]
+exclude_dirs = [".tox", ".venv", ".ipynb"]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 120
