@@ -1,3 +1,7 @@
+[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg)](https://arxiv.org/abs/2410.19631)
+[![Python versions](https://img.shields.io/badge/Python-3.10%2B-green)](https://www.python.org/downloads/)
+[![license: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
+
 # Efficient Biological Data Acquisition through Inference Set Design
 
 This is the code for the paper ["Efficient Biological Data Acquisition through Inference Set Design"](https://arxiv.org/abs/2410.19631) accepted at ICLR 2025. 
