@@ -28,13 +28,10 @@ To train a model, simply run the `main.py`, and edit the configuration defined i
 If you use this code in your research, please cite the following paper:
 
 ```
-@misc{neporozhnii2024efficientbiologicaldataacquisition,
-      title={Efficient Biological Data Acquisition through Inference Set Design}, 
-      author={Ihor Neporozhnii and Julien Roy and Emmanuel Bengio and Jason Hartford},
-      year={2024},
-      eprint={2410.19631},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2410.19631}, 
+@article{neporozhnii2024efficient,
+ title={Efficient Biological Data Acquisition through Inference Set Design},
+ author={Neporozhnii, Ihor and Roy, Julien and Bengio, Emmanuel and Hartford, Jason},
+ journal={arXiv preprint arXiv:2410.19631},
+ year={2024}
 }
 ```
