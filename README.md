@@ -12,6 +12,7 @@ In drug discovery, highly automated high-throughput laboratories are used to scr
 <p align="center">
 <img src="docs/inference_set_design_overview.png" width=80%>
 </p>
+
 ### Installation
 
 ```
