@@ -119,9 +119,6 @@ class Mol3DCompoundAcquisition(BaseTask):
     def get_acquisition_scores(self, ensemble_preds: np.ndarray, x_idxs: np.ndarray):
         n_samples, n_models = ensemble_preds.shape
 
-        # TODO: MAKE SURE THE ORDERING FROM THE DATALOADER THAT PRODUCES class_probs
-        # IS THE SAME AS THE ORDERING OF COMPOUNDS IN THE ACQUISITION MASKS
-
         # Get stardand deviation of ensemble predictions for compounds
         std = get_ensemble_std(ensemble_preds)
 

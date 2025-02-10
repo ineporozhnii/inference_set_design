@@ -27,8 +27,6 @@ from inference_set_design.utils.misc import EarlyStopper
 class BaseTask:
     """
     The 'Task' class is responsible for implementing everything that goes into one active learning step.
-    For now we only consider classification tasks.
-    TODO: extend to generic supervised learning tasks.
 
     It is the prediction task that is being wrapped into the active learning loop.
     It is responsible for:

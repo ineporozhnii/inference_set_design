@@ -118,8 +118,6 @@ class QM9CompoundAcquisition(BaseTask):
     def get_acquisition_scores(self, class_probs: np.ndarray, x_idxs: np.ndarray):
         n_samples, n_classes = class_probs.shape
         assert n_classes == self.n_classes
-        # TODO: MAKE SURE THE ORDERING FROM THE DATALOADER THAT PRODUCES class_probs
-        # IS THE SAME AS THE ORDERING OF COMPOUNDS IN THE ACQUISITION MASKS
 
         # Get the mean uncertainty for compounds
         uncertainty = get_classification_uncertainty(class_probs, n_classes=n_classes)

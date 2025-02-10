@@ -43,7 +43,7 @@ class BaseAgent(ABC):
             class_probs, labels, _ = self.task.predict(model=model, dataloader=loader)
             metrics = self.task.compute_metrics(class_probs, labels, data_cut)
         else:
-            metrics = {}  # TODO: should this be 'None' instead?
+            metrics = {}
         return metrics
 
     @abstractmethod
