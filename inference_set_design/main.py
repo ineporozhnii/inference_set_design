@@ -9,7 +9,7 @@ if __name__ == "__main__":
     cfg.model_cfg.train_epochs = 3
     cfg.model_cfg.num_ensmbl_members = None
 
-    TASK = "qm9"    
+    TASK = "rxrx3"    
     cfg.task_name = TASK
 
     if TASK == "corrupted_mnist":
@@ -36,6 +36,12 @@ if __name__ == "__main__":
         cfg.task_cfg.mol3d.data_path = (
             "./mol3d_data/splits"
         )
+    
+    elif TASK == "rxrx3":
+        cfg.acquisition_batch_size = 25
+        cfg.model_cfg.train_batch_size = 25
+        cfg.model_cfg.model_name = "MultiTaskMLP"
+        cfg.agent_cfg.log_explorable_preds = False
 
     env = ActiveLearningEnvironment(cfg)
     env.run_active_learning_loop()

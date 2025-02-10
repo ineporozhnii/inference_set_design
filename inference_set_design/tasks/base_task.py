@@ -173,8 +173,6 @@ class BaseTask:
         else:
             raise ValueError(
                 f"Model {self.model_cfg.model_name} not supported for the BaseTask. "
-                f"If your 'Task' uses a specialised model (e.g. Sphere), your Task class "
-                f"should implement the 'initialise_model' method."
             )
         return model
 

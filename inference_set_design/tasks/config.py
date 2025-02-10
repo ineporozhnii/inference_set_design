@@ -34,7 +34,17 @@ class CorruptedMNIST(StrictDataClass):
 
 
 @dataclass(repr=False)
+class RXRX3Config(StrictDataClass):
+    n_explorable_cmpds: Optional[int] = None
+    n_init_train_cmpds: int = 0
+    emb_name: str = "molgps_fps"
+    data_path: str = "data/RxRx3"
+    use_class_balancing_weights: bool = True
+
+
+@dataclass(repr=False)
 class TaskConfig(StrictDataClass):
     qm9: Optional[QM9Config] = field(default_factory=QM9Config)
     mol3d: Optional[Mol3DConfig] = field(default_factory=Mol3DConfig)
     corrupted_mnist: Optional[CorruptedMNIST] = field(default_factory=CorruptedMNIST)
+    rxrx3: Optional[RXRX3Config] = field(default_factory=RXRX3Config)

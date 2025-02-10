@@ -27,6 +27,7 @@ from inference_set_design.config import Config, check_config
 from inference_set_design.tasks.corrupted_mnist import CorruptedMNISTAcquisition
 from inference_set_design.tasks.mol3d import Mol3DCompoundAcquisition
 from inference_set_design.tasks.qm9 import QM9CompoundAcquisition
+from inference_set_design.tasks.rxrx3 import RxRx3MapAcquisition
 from inference_set_design.utils.misc import (
     create_logger,
     hms_time_fmt,
@@ -121,6 +122,11 @@ class ActiveLearningEnvironment:
             TaskClass = CorruptedMNISTAcquisition
             task_specific_kwargs = {
                 "task_cfg": self.cfg.task_cfg.corrupted_mnist,
+            }
+        elif self.cfg.task_name == "rxrx3":
+            TaskClass = RxRx3MapAcquisition
+            task_specific_kwargs = {
+                "task_cfg": self.cfg.task_cfg.rxrx3,
             }
         else:
             raise NotImplementedError(f"Task {self.cfg.task_name} not implemented.")
